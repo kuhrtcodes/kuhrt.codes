@@ -50,6 +50,14 @@ export default {
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['@/assets/styles/main.scss'],
 
+  // Styles used in components
+  styleResources: {
+    scss: [
+      '@/assets/styles/global/_mixins.scss',
+      '@/assets/styles/global/_variables.scss',
+    ],
+  },
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: ['@/plugins/composition-api'],
 
@@ -65,7 +73,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [],
+  modules: ['@nuxtjs/style-resources'],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},

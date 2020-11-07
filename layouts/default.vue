@@ -1,6 +1,10 @@
 <template>
-  <div class="hello-world">
-    <Nuxt />
+  <div class="kuhrtcodes">
+    <Toolbar />
+    <main>
+      <Nuxt />
+    </main>
+    <footer></footer>
   </div>
 </template>
 

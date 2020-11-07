@@ -1,22 +1,13 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
       <h1 class="title">Kuhrt.Codes</h1>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="https://github.com/Kuhrt"
           target="_blank"
           rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
+          class="button"
         >
           GitHub
         </a>
@@ -26,13 +17,14 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
+import { defineComponent } from '@vue/composition-api';
 
-export default Vue.extend({});
+export default defineComponent({});
 </script>
 
 <style>
 .container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
+  @apply flex justify-center items-center text-center mx-auto;
+  min-height: 100%;
 }
 </style>
