@@ -5,6 +5,9 @@ module.exports = {
   },
   purge: [],
   theme: {
+    container: {
+      padding: '1rem',
+    },
     fontFamily: {
       display: ['Roboto', 'sans-serif'],
       body: ['Open Sans', 'sans-serif'],
