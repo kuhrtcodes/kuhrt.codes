@@ -48,9 +48,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api';
+import { defineComponent, onMounted } from '@vue/composition-api';
 
-export default defineComponent({});
+export default defineComponent({
+  setup() {
+    onMounted(() => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+      window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });
+    });
+  },
+});
 </script>
 
 <style lang="scss">
@@ -70,6 +82,7 @@ export default defineComponent({});
     @apply flex justify-center items-center text-center;
     position: relative;
     min-height: 70vh;
+    min-height: calc(var(--vh, 1vh) * 70);
     overflow: hidden;
 
     & > * {
@@ -102,6 +115,7 @@ export default defineComponent({});
     position: relative;
     text-align: right;
     min-height: 30vh;
+    min-height: calc(var(--vh, 1vh) * 30);
 
     .container {
       position: absolute;
