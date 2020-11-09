@@ -1,11 +1,10 @@
 <template>
   <div class="kc-home">
-    <section class="kc-home__hero">
-      <div>
-        <h1 class="title mb-0">Kuhrt.Codes</h1>
-        <p>TypeScript and JavaScript Developer</p>
-      </div>
-    </section>
+    <div class="kc-home__title">
+      <h1 class="title mb-0">Kuhrt.Codes</h1>
+      <p>TypeScript and JavaScript Developer</p>
+    </div>
+    <section class="kc-home__hero"></section>
     <section class="kc-home__contact section--dark-green">
       <div class="container">
         <h2 class="mt-0 text-right">Get In Touch</h2>
@@ -56,7 +55,16 @@ export default defineComponent({});
 
 <style lang="scss">
 .kc-home {
+  position: relative;
   width: 100%;
+
+  .kc-home__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
 
   .kc-home__hero {
     @apply flex justify-center items-center text-center;
@@ -97,12 +105,12 @@ export default defineComponent({});
 
     .container {
       position: absolute;
-      right: 2rem;
-      bottom: 2rem;
+      right: 1.5rem;
+      bottom: 1.5rem;
 
       @media screen and (min-width: $xxl) {
         max-width: 100%;
-        padding: 0 2rem;
+        padding: 0;
       }
     }
 
@@ -113,6 +121,12 @@ export default defineComponent({});
         display: flex;
         align-items: center;
         font-size: 1.75rem;
+        @include default-transition;
+
+        &:hover,
+        &:focus {
+          @apply text-green-500;
+        }
 
         svg {
           width: 1.75rem;
