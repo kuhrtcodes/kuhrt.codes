@@ -75,6 +75,7 @@ export default defineComponent({
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
     z-index: 10;
   }
 
@@ -134,6 +135,7 @@ export default defineComponent({
       .contact-link {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         font-size: 1.75rem;
         @include default-transition;
 
