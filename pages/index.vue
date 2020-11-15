@@ -5,9 +5,9 @@
       <p>TypeScript and JavaScript Developer</p>
     </div>
     <section class="kc-home__hero"></section>
-    <section class="kc-home__contact section--dark-green">
+    <section class="kc-home__contact section--green">
       <div class="container">
-        <h2 class="mt-0 text-right">Get In Touch</h2>
+        <h2 class="h3 mt-0 text-right">Get In Touch</h2>
         <div class="kc-home-contact__links">
           <a class="contact-link" href="mailto:contact@kuhrt.codes">
             <svg
@@ -93,7 +93,7 @@ export default defineComponent({
 
     &:after {
       content: '';
-      @apply bg-dark-green-500;
+      @apply bg-green-500;
       position: absolute;
       top: 90%;
       left: 0;
@@ -135,13 +135,13 @@ export default defineComponent({
       .contact-link {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        font-size: 1.75rem;
+        justify-content: flex-end;
+        font-size: 1.25rem;
         @include default-transition;
 
         &:hover,
         &:focus {
-          @apply text-green-500;
+          @apply text-black;
         }
 
         svg {
