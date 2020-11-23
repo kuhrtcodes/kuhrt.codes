@@ -25,6 +25,7 @@ export default defineComponent({
   justify-content: space-between;
   padding: 1.5rem;
   width: 100%;
+  max-height: $toolbar-height;
   z-index: 1000;
 
   .logo {

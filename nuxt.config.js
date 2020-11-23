@@ -75,11 +75,41 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/auth', '@nuxtjs/axios', '@nuxtjs/style-resources'],
+
+  // Authentication options
+  auth: {
+    plugins: ['~/plugins/appmetadata.ts'],
+    redirect: {
+      login: '/',
+      callback: '/success',
+      home: '/dashboard',
+    },
+    strategies: {
+      local: false,
+      auth0: {
+        domain: 'kuhrtcodes.us.auth0.com',
+        client_id: process.env.AUTH0_APP_CLIENT_SECRET,
+        audience: 'https://kuhrtcodes.us.auth0.com/api/v2/',
+      },
+    },
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
 
+  // Router settings
+  router: {
+    middleware: ['auth'],
+  },
+
+  // Global middleware
+  middleware: [],
+
+  // Server middleware
+  serverMiddleware: ['~/api/management'],
+
+  // Google Analytics settings
   googleAnalytics: {
     id: 'UA-114652432-1',
   },

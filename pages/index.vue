@@ -2,7 +2,7 @@
   <div class="kc-home">
     <div class="kc-home__title">
       <h1 class="title mb-0">Kuhrt.Codes</h1>
-      <p>TypeScript and JavaScript Developer</p>
+      <p>Web Developer</p>
     </div>
     <section class="kc-home__hero"></section>
     <section class="kc-home__contact section--green">
@@ -51,6 +51,7 @@
 import { defineComponent, onMounted } from '@vue/composition-api';
 
 export default defineComponent({
+  auth: false,
   setup() {
     onMounted(() => {
       let vh = window.innerHeight * 0.01;
@@ -83,7 +84,7 @@ export default defineComponent({
     @apply flex justify-center items-center text-center;
     position: relative;
     min-height: 70vh;
-    min-height: calc(var(--vh, 1vh) * 70);
+    min-height: calc((var(--vh, 1vh) * 70) - 5.5rem);
     overflow: hidden;
 
     & > * {
@@ -103,7 +104,7 @@ export default defineComponent({
       z-index: 1;
 
       @media screen and (min-width: $lg) {
-        top: 80%;
+        top: 87%;
       }
 
       @media screen and (min-width: $xxl) {
