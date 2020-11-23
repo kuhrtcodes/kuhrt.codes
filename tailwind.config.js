@@ -6,7 +6,8 @@ module.exports = {
   purge: [],
   theme: {
     container: {
-      padding: '1rem',
+      center: true,
+      padding: '1.5rem',
     },
     fontFamily: {
       display: ['Roboto', 'sans-serif'],
