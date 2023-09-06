@@ -1,18 +1,14 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  future: {
-    // removeDeprecatedGapUtilities: true,
-    // purgeLayersByDefault: true,
-  },
-  purge: [],
+  content: [
+    './components/**/*.{js,vue,ts}',
+    './layouts/**/*.vue',
+    './pages/**/*.vue',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+    './app.vue',
+  ],
   theme: {
-    container: {
-      center: true,
-      padding: '1.5rem',
-    },
-    fontFamily: {
-      display: ['Roboto', 'sans-serif'],
-      body: ['Open Sans', 'sans-serif'],
-    },
     extend: {
       colors: {
         black: '#12130F',
@@ -63,8 +59,11 @@ module.exports = {
           900: '#4c5550',
         },
       },
+      fontFamily: {
+        display: ['Roboto', 'sans-serif'],
+        body: ['Open Sans', 'sans-serif'],
+      },
     },
   },
-  variants: {},
   plugins: [],
-};
+}

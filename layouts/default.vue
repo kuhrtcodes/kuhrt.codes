@@ -1,11 +1,19 @@
 <template>
-  <div class="kuhrtcodes">
-    <Toolbar />
+  <div class="relative min-h-screen bg-white">
+    <Header class="absolute top-0 left-0 w-full" />
     <main>
-      <Nuxt />
+      <slot />
     </main>
-    <footer></footer>
+    <Footer class="absolute bottom-0 left-0 w-full" />
   </div>
 </template>
 
-<style></style>
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Kuhrt.Codes',
+  ogTitle: 'Kuhrt.Codes',
+  description: 'Web Developer',
+  ogDescription: 'Web Developer',
+  twitterCard: 'summary_large_image'
+});
+</script>
